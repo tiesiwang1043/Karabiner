@@ -5,3 +5,28 @@ This is the machine translation.
 Karabiner
 These are my exclusive shortcuts for Mac's DaVinci Resolve and Final Cut Pro X...
 These are the useful things I've accumulated over the years. I hope they can help you become an outstanding professional in this regard.
+从这里开始就是标准代码:
+长安退格键,执行command+backspace 这样大家就可以删除了
+{
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "delete_or_backspace",
+                "modifiers": { "optional": ["any"] }
+            },
+            "parameters": { "basic.to_if_alone_timeout_milliseconds": 300 },
+            "to_if_alone": [{ "key_code": "delete_or_backspace" }],
+            "to_if_held_down": [
+                {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": ["left_command"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
+
+
+这是第二个有意思的快捷键 它主要是满足我使用AE的需求
+
