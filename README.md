@@ -10,6 +10,7 @@ These are the useful things I've accumulated over the years. I hope they can hel
 {
     "manipulators": [
         {
+            "description": "⌘删除：长按 Delete 执行 Command+Delete（删除光标后内容或文件）",
             "from": {
                 "key_code": "delete_or_backspace",
                 "modifiers": { "optional": ["any"] }
@@ -27,6 +28,50 @@ These are the useful things I've accumulated over the years. I hope they can hel
     ]
 }
 
+2.这是第二个有意思的快捷键 它主要是满足我使用AE的需求
+目前需要修改,之后我会再次修改发布到这里
+3·这是第三个有意思的,键盘修改.这个需要键盘上有旋钮.比如可以调节音量的.
+我这个功能是 把旋钮,映射成多功能 可以调节音量 可以调节 亮度 只需要按住不同功能的修饰肩即可获得这些功能
+{
+    "manipulators": [
+        {
+            "description": "多功能旋钮改造",
+            "from": {
+                "key_code": "comma",
+                "modifiers": { "mandatory": ["option"] }
+            },
+            "to": [{ "key_code": "volume_decrement" }],
+            "type": "basic"
+        },
+        {
+            "description": "Fn+. → 音量增大",
+            "from": {
+                "key_code": "period",
+                "modifiers": { "mandatory": ["option"] }
+            },
+            "to": [{ "key_code": "volume_increment" }],
+            "type": "basic"
+        },
+        {
+            "description": "Shift+, → 亮度降低",
+            "from": {
+                "key_code": "comma",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [{ "consumer_key_code": "display_brightness_decrement" }],
+            "type": "basic"
+        },
+        {
+            "description": "Shift+. → 亮度升高",
+            "from": {
+                "key_code": "period",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [{ "consumer_key_code": "display_brightness_increment" }],
+            "type": "basic"
+        }
+    ],
+    "title": "Fn/Shift组合键自定义映射"
+}
 
-这是第二个有意思的快捷键 它主要是满足我使用AE的需求
-
+这是第四个有意思的快捷键映射
