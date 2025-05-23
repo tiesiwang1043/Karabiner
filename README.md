@@ -74,4 +74,39 @@ These are the useful things I've accumulated over the years. I hope they can hel
     "title": "Fn/Shift组合键自定义映射"
 }
 
-这是第四个有意思的快捷键映射
+这是第四个有意思的快捷键映射 
+这个功能是 Left Control + Q，触发 Command + [  我门在访达里面前进文件夹,倒退文件夹📁 的时候不需要我门的左右离开老家跑到键盘右区,去按 ⌘+[]
+
+
+{
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "q",
+                "modifiers": { "mandatory": ["left_control"] }
+            },
+            "to": [
+                {
+                    "key_code": "open_bracket",
+                    "modifiers": ["left_command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "w",
+                "modifiers": { "mandatory": ["left_control"] }
+            },
+            "to": [
+                {
+                    "key_code": "close_bracket",
+                    "modifiers": ["left_command"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
+
+这是第五个有意思的快捷键:
