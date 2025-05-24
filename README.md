@@ -110,3 +110,34 @@ These are the useful things I've accumulated over the years. I hope they can hel
 }
 
 这是第五个有意思的快捷键:
+这个是多功能ESC  按下一次是退格键  双击 是 ESC 功能 长按是 command+back 的删除. 
+{
+    "manipulators": [
+        {
+            "description": "单击一次 Escape 映射为退格，双击为 Escape，长按为 Command+退格",
+            "from": {
+                "key_code": "escape",
+                "modifiers": { "optional": ["any"] }
+            },
+            "parameters": {
+                "basic.to_delayed_action_delay_milliseconds": 300,
+                "basic.to_if_alone_timeout_milliseconds": 300,
+                "basic.to_if_held_down_threshold_milliseconds": 500
+            },
+            "to_delayed_action": {
+                "to_if_canceled": [],
+                "to_if_invoked": [{ "key_code": "escape" }]
+            },
+            "to_if_alone": [{ "key_code": "delete_or_backspace" }],
+            "to_if_held_down": [
+                {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": ["left_command"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
+
+这是第六个有意思的快捷键映射:
